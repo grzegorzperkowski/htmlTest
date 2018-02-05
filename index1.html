@@ -1,36 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta charset="utf8" />
+    <title>Room</title>
+    <script src="consts.js"></script>
+    <script src="client.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
-<body onload="app.init()">
-        <ul id="messages">
-        <li>
-        <hr>
-        <span>
-            <div>11:20</div>dd</span>
-        <div>sds</div>
-    </li>
-
-              <li>
-        <hr>
-        <span>
-            <div>11:20</div>dd</span>
-        <div>sds</div>
-    </li>
-
-
-        </ul>
-        <footer>
-            <input type="text" disabled id="msgToSend" />
-            <button type="submit" >Send</button>
-        </footer>
-    </body>
+<body>
+    <div id="background"></div>
+    <div class="conversation">
+        <div class="messageEntry">
+            <div class="senderDiv"> jan kowalski</div>
+            <div class="timeDiv">10:0</div>
+            <div class="messageDiv">test message</div>
+        </div>
+         <div class="messageEntry">
+            <div class="senderDiv"> </div>
+            <div class="timeDiv">10:1</div>
+            <div class="messageDiv">test two</div>
+        </div>
+        <div class="messageEntry">
+            <div class="senderDiv"> </div>
+            <div class="timeDiv">10:1</div>
+            <div class="messageDiv">test fdfsd fsd two</div>
+        </div>
+    </div>
+    <footer>
+        <textarea type="text" disabled id="msgToSend" maxlength="300" minLength="1" rows="3" autofocus placeholder="Type your message here"></textarea>
+        <button class="sendMsgBtn" disabled onclick="javascript: app.sendMessage()">Send</button>
+    </footer>
+    </div>
+</body>
 
 </html>
